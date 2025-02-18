@@ -24,7 +24,7 @@ The model is built using **TensorFlow** and is deployed using **Flask**, allowin
 ## Installation
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/your-repo/potato-leaf-disease-detection.git
+   git clone https://github.com/Arjun-97/potato-leaf-disease-detection.git
    cd potato-leaf-disease-detection
    ```
 2. **Set Up a Virtual Environment (Optional but Recommended)**
