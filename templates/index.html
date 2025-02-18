@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Leaf Disease Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">🌿 LeafGuard</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link active">Home</a>
+                <a href="/detect" class="nav-link">Detect</a>
+                <a href="/about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Potato Leaf Disease Detection</h1>
+        <p>Our advanced AI-powered system helps detect potato leaf diseases such as Early Blight and Late Blight to ensure better crop health and productivity.</p>
+        <p>By using this tool, farmers and agricultural experts can take preventive measures to minimize crop damage.</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🔍</div>
+                <h3 class="feature-title">Quick Detection</h3>
+                <p>Get instant results about the health status of your potato plants</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">High Accuracy</h3>
+                <p>Powered by advanced machine learning models for reliable results</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3 class="feature-title">Early Prevention</h3>
+                <p>Identify diseases early to prevent crop damage and losses</p>
+            </div>
+        </div>
+
+        <a href="/detect" class="button">Try the Detector</a>
+    </div>
+</body>
+</html>

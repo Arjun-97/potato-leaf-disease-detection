@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Potato Leaf Disease Detection</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">🌿 LeafGuard</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/detect" class="nav-link">Detect</a>
+                <a href="/about" class="nav-link active">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>About Potato Leaf Disease Detection</h1>
+
+        <div class="stats">
+            <div class="stat-item">
+                <div class="stat-number">25%</div>
+                <div class="stat-label">Average Crop Loss Due to Diseases</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">95%</div>
+                <div class="stat-label">Detection Accuracy</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">48h</div>
+                <div class="stat-label">Early Detection Window</div>
+            </div>
+        </div>
+
+        <h2>Why Early Detection Matters</h2>
+        <p>Potato leaf diseases, particularly Early Blight and Late Blight, can devastate entire crops if not detected and treated promptly. Early detection is crucial for several reasons:</p>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">💰</div>
+                <h3 class="feature-title">Economic Impact</h3>
+                <p>Potato diseases cause billions in losses annually. Early detection can save up to 60% of potential crop loss.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3 class="feature-title">Food Security</h3>
+                <p>Potatoes are the world's fourth-largest food crop. Protecting them ensures food security for millions.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌱</div>
+                <h3 class="feature-title">Sustainable Farming</h3>
+                <p>Early detection means targeted treatment, reducing the need for widespread pesticide use.</p>
+            </div>
+        </div>
+
+        <h2>Our Technology</h2>
+        <p>Our system uses advanced deep learning algorithms trained on thousands of images of healthy and diseased potato leaves. This allows us to detect diseases with high accuracy in their early stages, giving farmers the crucial time window needed for effective treatment.</p>
+
+        <a href="/detect" class="button">Try Disease Detection Now</a>
+    </div>
+</body>
+</html>

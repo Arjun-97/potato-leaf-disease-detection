@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potato Leaf Disease Detector</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-content">
+            <a href="/" class="nav-brand">🌿 LeafGuard</a>
+            <div class="nav-links">
+                <a href="/" class="nav-link">Home</a>
+                <a href="/detect" class="nav-link active">Detect</a>
+                <a href="/about" class="nav-link">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Upload an Image to Detect Disease</h1>
+        <form action="/detect" method="post" enctype="multipart/form-data">
+            <div class="upload-section">
+                <input type="file" name="file" accept="image/*" required onchange="previewImage(event)">
+            </div>
+            <img id="imagePreview" class="preview" style="display: none;" alt="Image preview" />
+            <button type="submit" class="button">Detect Disease</button>
+        </form>
+        {% if prediction %}
+        <div class="result">
+            <p>Prediction: <span>{{ prediction }}</span></p>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        function previewImage(event) {
+            const reader = new FileReader();
+            reader.onload = function(){
+                const output = document.getElementById('imagePreview');
+                output.src = reader.result;
+                output.style.display = 'block';
+            }
+            reader.readAsDataURL(event.target.files[0]);
+        }
+    </script>
+</body>
+</html>
